@@ -26,7 +26,11 @@ body {
   background: var(--bg);
   color: var(--text);
 }
-
+html, body {
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+}
 body {
   overflow: hidden;
 }
@@ -39,7 +43,10 @@ body {
   flex-direction: column;
   gap: 14px;
 }
-
+.screen {
+width: 100vw;
+height: 100vh;
+}
 .topbar {
   background: var(--panel);
   border-radius: 26px;
@@ -104,6 +111,11 @@ body {
   grid-template-columns: 210px 1fr 1fr;
   grid-template-rows: 96px 1fr 1fr;
   gap: 14px;
+}
+
+.board {
+height: 100%;
+align-content: stretch;
 }
 
 .board-corner {
@@ -218,7 +230,9 @@ body {
   flex-direction: column;
   gap: 12px;
 }
-
+.times-list {
+flex:1;
+}
 .time-card {
   min-height: 82px;
   border: 2px solid var(--border);
