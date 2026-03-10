@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prochains passages Filibus - Senioriales Lucé</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="screen">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-icon">🚌</div>
+        <div class="brand-text">
+          <h1>Senioriales Lucé</h1>
+          <p>Prochains passages en temps réel</p>
+        </div>
+      </div>
+
+      <div class="clockbox">
+        <div id="clock">--:--</div>
+        <div id="updatedAt">Mise à jour : --:--:--</div>
+      </div>
+    </header>
+
+    <main class="board">
+      <div class="board-corner"></div>
+
+      <div class="line-head line-a">
+        <div class="line-badge">A</div>
+        <div class="line-meta">
+          <div class="line-name">Ligne A</div>
+          <div class="line-stop">Le Parc</div>
+        </div>
+      </div>
+
+      <div class="line-head line-6">
+        <div class="line-badge">6</div>
+        <div class="line-meta">
+          <div class="line-name">Ligne 6</div>
+          <div class="line-stop">Le Mithouard</div>
+        </div>
+      </div>
+
+      <div class="direction-card direction-chartres">
+        <div class="direction-arrow">←</div>
+        <div class="direction-text">Chartres</div>
+      </div>
+
+      <section class="times-panel" aria-label="Ligne A vers Chartres">
+        <div id="departures-a-chartres" class="times-list">
+          <div class="loading">Chargement…</div>
+        </div>
+      </section>
+
+      <section class="times-panel" aria-label="Ligne 6 vers Chartres">
+        <div id="departures-6-chartres" class="times-list">
+          <div class="loading">Chargement…</div>
+        </div>
+      </section>
+
+      <div class="direction-card direction-luce">
+        <div class="direction-arrow">→</div>
+        <div class="direction-text">Lucé</div>
+      </div>
+
+      <section class="times-panel" aria-label="Ligne A vers Lucé">
+        <div id="departures-a-luce" class="times-list">
+          <div class="loading">Chargement…</div>
+        </div>
+      </section>
+
+      <section class="times-panel" aria-label="Ligne 6 vers Lucé">
+        <div id="departures-6-luce" class="times-list">
+          <div class="loading">Chargement…</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div id="statusLeft">● Service OK</div>
+      <div id="statusRight">● Réseau OK</div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

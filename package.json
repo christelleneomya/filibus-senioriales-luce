@@ -1,0 +1,13 @@
+{
+  "name": "filibus-senioriales-luce",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Affichage dynamique Filibus pour Senioriales Lucé",
+  "scripts": {
+    "dev": "netlify dev"
+  },
+  "dependencies": {
+    "csv-parse": "^6.1.0",
+    "fast-xml-parser": "^4.5.0"
+  }
+}
