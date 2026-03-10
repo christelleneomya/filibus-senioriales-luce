@@ -32,12 +32,22 @@ function renderTimes(containerId, departures) {
     return;
   }
 
-  container.innerHTML = departures.slice(0, 3).map((dep, index) => `
-    <div class="time-card ${index === 0 ? "main" : ""}">
-      <div class="time-value">${dep.time}</div>
-      <div class="wait-value">${minutesLabel(dep.minutes)}</div>
-    </div>
-  `).join("");
+  const now = new Date();
+
+  container.innerHTML = departures.slice(0,3).map((dep,index)=>{
+
+    const future = new Date(now.getTime() + dep.minutes * 60000);
+
+    const h = String(future.getHours()).padStart(2,'0');
+    const m = String(future.getMinutes()).padStart(2,'0');
+
+    return `
+      <div class="time-card ${index===0 ? "main":""}">
+        <div class="time-value">${h}:${m}</div>
+        <div class="wait-value">${dep.minutes} min</div>
+      </div>
+    `;
+  }).join("");
 }
 
 async function loadDepartures() {
